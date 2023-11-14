@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #splash-image {
+/*   background-color: gray; */
+  background-image: url('https://westmeccoding.github.io/Dog_Animation/dog-park.webp');
+  width: 1200px;
+  height: 800px;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+}
+h1#park-name {
+  position: absolute;
+  color: red;
+  font-size: 5rem;
+  z-index: 1000;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 10%;
+  animation: appearingTitle 3s linear forwards;
+  text-shadow:
+  -2px -2px 0 #000,
+  /* top left */
+  2px -2px 0 #000,
+  /* top right */
+  -2px 2px 0 #000,
+   /* bottom left */
+  2px 2px 0 #000,
+  /* bottom right */
+  0 -2px 0 #000,
+  /* top */
+  0 2px 0 #000,
+  /* bottom */
+  -2px 0 0 #000,
+  /* left */
+  2px 0 0 #000;
+        }
+img#golden-dog {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  animation: risingDog 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+#red-frisbee {
+  position: absolute;
+  height: 180px;
+  width: 180px;
+  bottom: 150%;
+  right: 100%;
+  animation: fallingFrisbee 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes fallingFrisbee {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(810px) translateY(670px) rotate(-5deg);
+  }
+}
+@keyframes risingDog {
+  0% {
+    opacity: .2;
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-600px) translateY(-630px);
+  }
+}
+@keyframes appearingTitle {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+    </style>
+</head>
+<body>
+    <div id="splash-image">
+  <h1 id="park-name">Good Dog Frisbee Park</h1>
+        <img id="red-frisbee" src="https://westmeccoding.github.io/Dog_Animation/red-frisbee.png" alt="Red Frisbee" width="240" height="190" />
+        <img id="golden-dog" src="https://westmeccoding.github.io/Dog_Animation/dog-transparent.png" width="600" height="640" alt="Golden Dog" />
+</div>
+</body>
+</html>
